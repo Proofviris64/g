@@ -53,8 +53,8 @@ function updateSubcounts(){
     subgapOLD = subgap;
 
      setTimeout(function (){
-        $.getJSON('https://bastet.socialblade.com/youtube/lookup?query=UC-lHJZR3Gqxm24_Vd_AJ5Yw', function(pewdiepieS) {
-            pewdiepie = pewdiepieS;
+        $.getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key=AIzaSyB5wDjQtHF2mFLXILd9sLSJn1mj2qsaVY8', function(pewdiepieS) {
+            pewdiepie = pewdiepieS.items[0].statistics.subscriberCount;
          console.log("Getting pewdiepie's subs");
      });
     }, 0);
