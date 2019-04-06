@@ -60,8 +60,8 @@ function updateSubcounts(){
     }, 0);
 
     setTimeout(function (){
-        $.getJSON('https://bastet.socialblade.com/youtube/lookup?query=UCq-Fj5jknLsUf-MWSy4_brA', function(tseriesS) {
-            tseries = tseriesS;
+        $.getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCq-Fj5jknLsUf-MWSy4_brA&key=AIzaSyB5wDjQtHF2mFLXILd9sLSJn1mj2qsaVY8', function(tseriesS) {
+            tseries = tseriesS.items[0].statistics.subscriberCount;
             console.log("Getting tseries' subs");
      });
     }, 2000);
